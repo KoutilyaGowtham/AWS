@@ -1,6 +1,6 @@
 ---
 - name: creating a vpc
-  hosts: centos1
+  hosts: hosts
   tasks:
     - name: creating vpc
       ec2_vpc:
