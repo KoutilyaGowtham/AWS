@@ -1,6 +1,8 @@
 ---
 - name: creating a vpc
-  hosts: hosts
+  hosts: '{{ hosts }}'
+  vars:
+   hosts: local
   tasks:
     - name: creating vpc
       ec2_vpc:
