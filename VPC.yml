@@ -1,6 +1,6 @@
 ---
 - name: creating a vpc
-  hosts: myhost1
+  hosts: hosts
   remote_user: ansible
   become_method: sudo
   gather_facts: yes
