@@ -1,0 +1,8 @@
+- name: testing
+  hosts: hosts
+  rermote-user: ec2_user
+  become: yes
+  become_method: sudo
+  gather_facts: true
+  aws_access_key: AKIAJGSQ6OULOACON6IA
+  aws_secret_key: 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
