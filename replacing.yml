@@ -1,1 +1,9 @@
-
+--- # Replacing a single line in a text file in ec2 instance
+- name: replacing line
+  hosts: local
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  gather_facts: true
+  aws_access_key: AKIAJGSQ6OULOACON6IA
+  aws_secret_key: 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
