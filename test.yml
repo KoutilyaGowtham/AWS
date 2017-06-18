@@ -5,5 +5,4 @@
   become: yes
   become_method: sudo
   gather_facts: true
-  AWS_ACCESS_KEY_ID: AKIAJGSQ6OULOACON6IA
-  AWS_SECRET_KEY: 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
+ 
