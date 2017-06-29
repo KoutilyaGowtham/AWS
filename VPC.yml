@@ -6,7 +6,7 @@
   gather_facts: yes
   connection: ssh
   vars:
-   hosts: local
+   hosts: localhost
   tasks:
     - name: creating vpc
       ec2_vpc:
