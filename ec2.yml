@@ -1,13 +1,19 @@
----
- - name: Launching an EC2 Instance
-   local_action: ec2
-       instance_type=t2.micro 
-       image=ami-9e2f0988
-       region=us-east-1
-       keypair=windowsnew
-       count=1
-       instance_profile_name=ansible
-       group=sg-b6f015c7
-       wait=true
-       volumes=vol-07e59f632e9040fcd
-   register: ec2
+-   name: Create an EC2 instance
+    hosts: local
+    remote_user: user
+    become: true
+    become_method: sudo
+    gather_facts: true
+    connection: ssh
+    ec2:
+        key_name: windowsnew
+        region: us-east-1
+        group_id: sg-b6f015c7
+        instance_type: t2.micro
+        image: ami-9e2f0988
+        wait: yes
+        instance_tags:
+            env: "{{ env }}"
+        count_tag: env
+        exact_count: 1
+    register: ec2
