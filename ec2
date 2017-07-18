@@ -1,0 +1,13 @@
+---
+ - name: Launching an EC2 Instance
+   local_action: ec2
+       instance_type=t2.micro 
+       image=ami-9e2f0988
+       region=us-east-1
+       keypair=windowsnew
+       count=1
+       instance_profile_name=ansible
+       group=sg-b6f015c7
+       wait=true
+       volumes=vol-07e59f632e9040fcd
+   register: ec2
