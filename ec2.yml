@@ -1,4 +1,4 @@
----# Creating an ec2 instance
+ 
  - name: Create an EC2 instance
    hosts: local
    remote_user: user
