@@ -5,5 +5,5 @@
    connection: ssh
    gather_facts: no
  - name: test
-   file: path = "secret_vars/test1.yml"
-   state: touch
+    file: path = "secret_vars/test1.yml"
+    state: touch
